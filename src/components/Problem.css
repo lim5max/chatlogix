@@ -1,0 +1,117 @@
+.problem {
+  padding: 60px 0;
+  background: var(--white);
+}
+
+.col-wide {
+  max-width: var(--wide);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.sec-label {
+  font-family: 'Google Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--gray-400);
+  text-align: center;
+  margin-bottom: 12px;
+}
+.sec-title {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  text-align: center;
+  color: var(--black);
+  margin-bottom: 16px;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+}
+.sec-sub {
+  text-align: center;
+  color: var(--gray-500);
+  font-size: 1.2rem;
+  max-width: 500px;
+  margin: 0 auto;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+/* ── Two columns side by side ── */
+.problem-duo {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap: 0;
+  margin-top: 48px;
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.problem-divider {
+  background: var(--gray-200);
+}
+
+.problem-col {
+  padding: 32px 28px;
+}
+
+.problem-col-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.problem-col-icon {
+  font-size: 1.2rem;
+}
+
+.problem-col-head h3 {
+  font-family: 'Google Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--black);
+  letter-spacing: -0.01em;
+}
+
+.problem-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+}
+
+.problem-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.95rem;
+  color: var(--gray-700);
+  line-height: 1.5;
+}
+
+.problem-emoji {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  margin-top: -1px;
+}
+
+@media (max-width: 640px) {
+  .problem { padding: 72px 0; }
+  .problem-duo {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1px auto;
+  }
+  .problem-divider {
+    height: 1px;
+    width: 100%;
+  }
+  .problem-col {
+    padding: 24px 20px;
+  }
+}
