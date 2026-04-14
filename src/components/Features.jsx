@@ -50,7 +50,7 @@ export default function Features() {
           </div>
 
           <ul className="feat-checks-h r d4">
-            <li><Check /> Темы и решения</li>
+            <li><Check /> AI-саммаризация</li>
             <li><Check /> Ссылки и упоминания</li>
             <li><Check /> Команда /summary</li>
           </ul>
@@ -91,7 +91,7 @@ export default function Features() {
           <ul className="feat-checks-h r d4">
             <li><Check /> Автоматическая расшифровка</li>
             <li><Check /> Длинные аудио</li>
-            <li><Check /> Точность Whisper</li>
+            <li><Check /> Точность 99%</li>
           </ul>
         </div>
       </div>
@@ -141,7 +141,7 @@ export default function Features() {
           <ul className="feat-checks-h r d4">
             <li><Check /> Все чаты в одном</li>
             <li><Check /> Приходит в личку</li>
-            <li><Check /> Настраиваемое расписание</li>
+            <li><Check /> Умная AI-саммаризация</li>
           </ul>
         </div>
       </div>
