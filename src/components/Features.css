@@ -61,8 +61,37 @@
   white-space: nowrap;
 }
 
+/* Chat tabs */
+.chat-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 32px;
+}
+.chat-tab {
+  font-family: 'Google Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: 1px solid var(--gray-200);
+  background: var(--white);
+  color: var(--gray-500);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.chat-tab:hover {
+  border-color: var(--gray-300);
+  color: var(--gray-700);
+}
+.chat-tab.active {
+  background: var(--black);
+  color: var(--white);
+  border-color: var(--black);
+}
+
 .feat-mock {
-  margin-top: 48px;
+  margin-top: 24px;
 }
 
 /* ── Summary: before/after ── */
@@ -184,6 +213,9 @@
   border-radius: var(--radius);
   padding: 20px;
 }
+.mock-voice-after {
+  position: relative;
+}
 .voice-bubble {
   display: flex;
   align-items: center;
@@ -230,6 +262,91 @@
   color: var(--gray-700);
   line-height: 1.65;
   font-style: italic;
+}
+
+/* ── Antispam ── */
+.as-before .mock-msg {
+  position: relative;
+}
+.as-spam {
+  background: rgba(224, 85, 85, 0.06) !important;
+  border: 1px solid rgba(224, 85, 85, 0.15);
+}
+.as-n-spam {
+  color: var(--red) !important;
+  opacity: 0.7;
+}
+.as-toxic {
+  background: rgba(224, 85, 85, 0.08) !important;
+  border: 1px solid rgba(224, 85, 85, 0.2);
+}
+.as-n-toxic {
+  color: var(--red) !important;
+}
+.as-chaos-label {
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--gray-400);
+  padding-top: 8px;
+  font-style: italic;
+}
+
+/* After card */
+.as-after {
+  position: relative;
+}
+.as-bot-log {
+  background: var(--gray-50);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  margin-top: 8px;
+}
+.as-log-head {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 10px;
+}
+.as-log-line {
+  font-size: 0.82rem;
+  color: var(--gray-600, #666);
+  line-height: 1.7;
+}
+.as-del {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--red);
+  background: rgba(224, 85, 85, 0.08);
+  border-radius: 4px;
+  padding: 1px 6px;
+  margin-right: 4px;
+}
+.as-mute {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-radius: 4px;
+  padding: 1px 6px;
+  margin-right: 4px;
+}
+.as-ban {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--red);
+  border-radius: 4px;
+  padding: 1px 6px;
+  margin-right: 4px;
+}
+/* Equalize heights */
+.as-before,
+.as-after {
+  display: flex;
+  flex-direction: column;
 }
 
 /* ── Super Summary digest ── */
@@ -352,6 +469,38 @@
   font-size: 0.7rem;
   color: var(--gray-400);
   flex-shrink: 0;
+}
+
+/* Text messages in voice mockup */
+.vmsg-text {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.vmsg-txt {
+  font-size: 0.85rem;
+  color: var(--gray-700);
+  background: var(--gray-50);
+  border-radius: 10px;
+  padding: 8px 12px;
+  line-height: 1.4;
+}
+
+/* Badge */
+.vtc-badge {
+  position: absolute;
+  bottom: -14px;
+  right: -16px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--blue);
+  background: var(--white);
+  border: 1px solid rgba(42, 171, 238, 0.2);
+  border-radius: 20px;
+  padding: 6px 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  white-space: nowrap;
 }
 
 @media (max-width: 640px) {
