@@ -14,7 +14,7 @@ export default function Nav() {
     <nav className={`nav ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-inner">
         <a href="#" className="logo">
-          <div className="logo-mark">C</div>
+          <img src="/logo.jpg" alt="ChatLogix" className="logo-mark-img" />
           ChatLogix
         </a>
         <a href="https://t.me/ChatLogixBot" className="nav-cta" target="_blank" rel="noopener">

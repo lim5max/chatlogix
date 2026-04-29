@@ -268,20 +268,24 @@
 .as-before .mock-msg {
   position: relative;
 }
-.as-spam {
-  background: rgba(224, 85, 85, 0.06) !important;
-  border: 1px solid rgba(224, 85, 85, 0.15);
-}
-.as-n-spam {
-  color: var(--red) !important;
-  opacity: 0.7;
-}
+.as-spam,
 .as-toxic {
-  background: rgba(224, 85, 85, 0.08) !important;
-  border: 1px solid rgba(224, 85, 85, 0.2);
+  background: rgba(224, 85, 85, 0.10) !important;
+  border-left: 3px solid var(--red) !important;
+  border-radius: 0 10px 10px 0 !important;
 }
+.as-n-spam,
 .as-n-toxic {
   color: var(--red) !important;
+}
+.as-struck {
+  opacity: 0.35;
+  text-decoration: line-through;
+  background: var(--gray-50) !important;
+  border: none !important;
+}
+.as-struck s {
+  text-decoration: line-through;
 }
 .as-chaos-label {
   text-align: center;
@@ -306,6 +310,18 @@
   font-weight: 700;
   color: var(--black);
   margin-bottom: 10px;
+}
+.as-bot-log-compact .as-log-head {
+  font-size: 0.8rem;
+  margin-bottom: 6px;
+}
+.as-bot-log-compact .as-log-line {
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+.as-log-dim {
+  color: var(--gray-400);
+  font-size: 0.72rem;
 }
 .as-log-line {
   font-size: 0.82rem;
@@ -347,6 +363,80 @@
 .as-after {
   display: flex;
   flex-direction: column;
+}
+
+/* ── Knowledge Base ── */
+.kb-single {
+  max-width: 440px;
+  margin: 0 auto;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 20px;
+  text-align: left;
+}
+.kb-search-msg {
+  font-size: 0.9rem;
+  color: var(--gray-700);
+  padding: 8px 12px;
+  border-radius: 10px;
+  margin-bottom: 6px;
+  background: var(--gray-50);
+  line-height: 1.5;
+}
+.kb-cmd {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--blue);
+  background: rgba(74, 127, 255, 0.08);
+  border-radius: 4px;
+  padding: 2px 6px;
+  margin: 0 4px 0 6px;
+}
+.kb-result-card {
+  background: var(--gray-50);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+}
+.kb-result-head {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 12px;
+}
+.kb-result-item {
+  padding: 10px 0;
+  border-top: 1px solid var(--gray-200);
+}
+.kb-result-item:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+.kb-result-topic {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: 3px;
+}
+.kb-result-meta {
+  font-size: 0.85rem;
+  color: var(--gray-500);
+  margin-bottom: 6px;
+}
+.kb-result-quote {
+  font-size: 0.85rem;
+  color: var(--gray-600, #666);
+  font-style: italic;
+  line-height: 1.5;
+  padding-left: 10px;
+  border-left: 2px solid var(--gray-300);
+  margin-bottom: 6px;
+}
+.kb-result-link {
+  font-size: 0.85rem;
+  color: var(--blue);
+  font-weight: 500;
 }
 
 /* ── Super Summary digest ── */

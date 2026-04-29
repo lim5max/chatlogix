@@ -208,26 +208,23 @@ export default function Features() {
                 <div className="mock-msg as-spam"><span className="mock-name as-n-spam">crypto_guru</span> Бесплатные сигналы в канале!</div>
                 <div className="mock-msg as-toxic"><span className="mock-name as-n-toxic">troll_228</span> Вы все тут д***ы, ничего не понимаете</div>
                 <div className="mock-msg m2"><span className="mock-name n2">Марина</span> Алексей, в 15:00</div>
-                <div className="mock-msg m3"><span className="mock-name n3">flood_user</span> ааааааааааааа</div>
-                <div className="mock-msg m3"><span className="mock-name n3">flood_user</span> ааааааааааааа</div>
-                <div className="mock-msg m3"><span className="mock-name n3">flood_user</span> ааааааааааааа</div>
+                <div className="mock-msg as-toxic"><span className="mock-name as-n-toxic">flood_user</span> ааааааааааааа</div>
+                <div className="mock-msg as-toxic"><span className="mock-name as-n-toxic">flood_user</span> ааааааааааааа</div>
+                <div className="mock-msg as-toxic"><span className="mock-name as-n-toxic">flood_user</span> ааааааааааааа</div>
                 <div className="as-chaos-label">...и так каждый день</div>
               </div>
               <div className="mock-arrow">→</div>
               <div className="mock-after as-after">
                 <div className="mock-label">С антиспамом</div>
+                <div className="mock-msg as-struck"><span className="mock-name as-n-spam">spam_bot_92</span> <s>Заработок от 5000$...</s></div>
                 <div className="mock-msg m1"><span className="mock-name n1">Алексей</span> Когда созвон по проекту?</div>
+                <div className="mock-msg as-struck"><span className="mock-name as-n-spam">crypto_guru</span> <s>Бесплатные сигналы...</s></div>
                 <div className="mock-msg m2"><span className="mock-name n2">Марина</span> Алексей, в 15:00</div>
+                <div className="mock-msg as-struck"><span className="mock-name as-n-toxic">troll_228</span> <s>Вы все тут д***ы...</s></div>
+                <div className="mock-msg as-struck"><span className="mock-name as-n-toxic">flood_user</span> <s>ааааааааааааа</s></div>
+                <div className="mock-msg as-struck"><span className="mock-name as-n-toxic">flood_user</span> <s>ааааааааааааа</s></div>
                 <div className="mock-msg m3"><span className="mock-name n3">Дима</span> Ок, буду. Скиньте ссылку на Zoom</div>
                 <div className="mock-msg m1"><span className="mock-name n1">Алексей</span> Отправил в личку</div>
-                <div className="mock-msg m2"><span className="mock-name n2">Марина</span> Подготовлю презу к созвону</div>
-                <div className="as-bot-log">
-                  <div className="as-log-head">🛡 ChatLogix — Модерация</div>
-                  <div className="as-log-line"><span className="as-del">Удалено</span> 2 спам-сообщения</div>
-                  <div className="as-log-line"><span className="as-del">Удалено</span> мат с обходом символов</div>
-                  <div className="as-log-line"><span className="as-mute">Ограничен</span> flood_user — флуд</div>
-                  <div className="as-log-line"><span className="as-ban">Забанен</span> spam_bot_92 — бот</div>
-                </div>
               </div>
             </div>
           </div>
@@ -236,6 +233,49 @@ export default function Features() {
             <li><Check /> Работает автоматически</li>
             <li><Check /> Настройка в мини-аппе</li>
             <li><Check /> Ежедневный дайджест</li>
+          </ul>
+        </div>
+      </div>
+
+      {/* ── Knowledge Base ── */}
+      <div className="feat">
+        <div className="col">
+          <div className="feat-tag r">База знаний</div>
+          <h2 className="sec-title r d1">Все знания чата<br />в одной команде.</h2>
+          <p className="sec-sub r d2">
+            Бот индексирует историю и превращает чат в базу знаний.
+          </p>
+
+          <div className="feat-mock r d3">
+            <div className="kb-single">
+              <div className="mock-msg m1"><span className="mock-name n1">Алексей</span> Я на Бали, куда сходить в кафе классное?</div>
+              <div className="mock-msg m2"><span className="mock-name n2">Марина</span> Мы же обсуждали, спроси у бота</div>
+              <div className="kb-search-msg">
+                <span className="mock-name n1">Алексей</span>
+                <span className="kb-cmd">/search</span> кафе на Бали
+              </div>
+              <div className="kb-result-card">
+                <div className="kb-result-head">🔍 Результаты по «кафе на Бали»</div>
+                <div className="kb-result-item">
+                  <div className="kb-result-topic">Лучшие кафе в Чангу</div>
+                  <div className="kb-result-meta">12 апр, 18 сообщений</div>
+                  <div className="kb-result-quote">«Crate Cafe — лучший завтрак, Shady Shack — для веганов, а в Milk & Madu обалденный кофе» — @marina_k</div>
+                  <div className="kb-result-link">Перейти к обсуждению</div>
+                </div>
+                <div className="kb-result-item">
+                  <div className="kb-result-topic">Убуд — где поесть недорого</div>
+                  <div className="kb-result-meta">8 апр, 11 сообщений</div>
+                  <div className="kb-result-quote">«Locavore слишком дорого, лучше Clear Cafe — вкусно и красиво...»</div>
+                  <div className="kb-result-link">Перейти к обсуждению</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <ul className="feat-checks-h r d4">
+            <li><Check /> Индексация 10 000 сообщений бесплатно</li>
+            <li><Check /> Автопополнение базы</li>
+            <li><Check /> Автообновление контекста</li>
           </ul>
         </div>
       </div>

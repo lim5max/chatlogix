@@ -41,7 +41,7 @@ export default function Hero() {
               <div className="tg-header-back">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6"/></svg>
               </div>
-              <div className="tg-header-ava">C</div>
+              <img src="/logo.jpg" alt="ChatLogix" className="tg-header-ava-img" />
               <div className="tg-header-info">
                 <div className="tg-header-name">ChatLogixBot</div>
                 <div className="tg-header-status">бот</div>
@@ -52,10 +52,10 @@ export default function Hero() {
             <div className="tg-body">
               {/* Bot message bubble */}
               <div className="tg-msg-row">
-                <div className="tg-msg-ava">C</div>
+                <img src="/logo.jpg" alt="ChatLogix" className="tg-msg-ava-img" />
                 <div className="tg-bubble">
                   <div className="tg-bubble-name">ChatLogixBot</div>
-                  <div className="tg-bubble-tag">Super-summary за 24 часа</div>
+                  <div className="tg-bubble-tag">📋 Super-summary за 24 часа</div>
 
                   <div className="ss-group">
                     <div className="ss-gtitle">📌 ЖК «Солнечный»</div>

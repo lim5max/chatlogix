@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-inner">
         <div className="footer-brand">
-          ChatLogix — главное из ваших чатов
+          ChatLogix. Все права защищены.
         </div>
         <div className="footer-links">
           <a href="https://t.me/ChatLogixBot" target="_blank" rel="noopener">Telegram</a>
