@@ -257,14 +257,12 @@ export default function Features() {
               <div className="kb-result-card">
                 <div className="kb-result-head">🔍 Результаты по «кафе на Бали»</div>
                 <div className="kb-result-item">
-                  <div className="kb-result-topic">Лучшие кафе в Чангу</div>
-                  <div className="kb-result-meta">12 апр, 18 сообщений</div>
+                  <div className="kb-result-topic">Лучшие кафе в Чангу <span className="kb-result-cnt">(18 сообщ)</span></div>
                   <div className="kb-result-quote">«Crate Cafe — лучший завтрак, Shady Shack — для веганов, а в Milk & Madu обалденный кофе» — @marina_k</div>
                   <div className="kb-result-link">Перейти к обсуждению</div>
                 </div>
                 <div className="kb-result-item">
-                  <div className="kb-result-topic">Убуд — где поесть недорого</div>
-                  <div className="kb-result-meta">8 апр, 11 сообщений</div>
+                  <div className="kb-result-topic">Убуд — где поесть недорого <span className="kb-result-cnt">(11 сообщ)</span></div>
                   <div className="kb-result-quote">«Locavore слишком дорого, лучше Clear Cafe — вкусно и красиво...»</div>
                   <div className="kb-result-link">Перейти к обсуждению</div>
                 </div>
