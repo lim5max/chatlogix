@@ -77,7 +77,7 @@ export default function Hero() {
                   </div>
 
                   <div className="ss-voice-block">
-                    <div className="ss-voice-label">🔊 Послушать саммари</div>
+                    <div className="ss-voice-label">🔊 Послушать подкаст</div>
                     <div className="ss-vplayer">
                       <button className="ss-play" aria-label="Play">
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>

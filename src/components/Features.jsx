@@ -59,7 +59,7 @@ const chatTabs = [
   },
   {
     id: 'clients',
-    label: 'Клиенты',
+    label: 'Клиентский чат',
     before: [
       { name: 'Настя', cls: 'n2', text: 'Клиент «Альфа» просит скидку 15%' },
       { name: 'Игорь', cls: 'n1', text: 'У них объём большой, можно дать 10%' },
@@ -82,12 +82,98 @@ const chatTabs = [
       link: 'Карточка клиента — CRM',
     },
   },
+  {
+    id: 'parents',
+    label: 'Родительский чат',
+    before: [
+      { name: 'Ольга', cls: 'n2', text: 'Завтра утренник в 10:00, не забудьте костюмы' },
+      { name: 'Сергей', cls: 'n1', text: 'А кто покупает подарок воспитателю?' },
+      { name: 'Наташа', cls: 'n3', text: 'Я собираю по 500 руб с человека' },
+      { name: 'Ольга', cls: 'n2', text: 'Скинула на карту' },
+      { name: 'Сергей', cls: 'n1', text: 'А что с ремонтом в группе?' },
+      { name: 'Наташа', cls: 'n3', text: 'Краску купили, красим в субботу' },
+      { name: 'Ольга', cls: 'n2', text: 'Кто может помочь?' },
+      { name: 'Сергей', cls: 'n1', text: 'Я приду с утра' },
+    ],
+    moreCount: '70+',
+    unread: 89,
+    lastMsg: { name: 'Наташа', cls: 'n3', text: 'Краска и валики есть, нужны ещё кисти' },
+    summary: {
+      topics: [
+        { icon: '🎭', text: 'Утренник: завтра 10:00, нужны костюмы', cnt: '6 сообщ' },
+        { icon: '🎁', text: 'Подарок воспитателю: сбор по 500 руб, Наташа собирает', cnt: '4 сообщ' },
+        { icon: '🔨', text: 'Ремонт группы: суббота, краска есть, нужны кисти', cnt: '8 сообщ' },
+      ],
+      link: 'Список покупок — Google Docs',
+    },
+  },
+]
+
+const kbTabs = [
+  {
+    id: 'lifestyle',
+    label: 'Бали Life',
+    msgs: [
+      { name: 'Алексей', cls: 'n1', text: 'Я на Бали, куда сходить в кафе классное?' },
+      { name: 'Марина', cls: 'n2', text: 'Мы же обсуждали, спроси у бота' },
+      { name: 'Алексей', cls: 'n1', cmd: true, query: 'кафе на Бали' },
+    ],
+    query: 'кафе на Бали',
+    results: [
+      { topic: 'Лучшие кафе в Чангу', cnt: '18 сообщ', quote: '«Crate Cafe — лучший завтрак, Shady Shack — для веганов, а в Milk & Madu обалденный кофе» — @marina_k' },
+      { topic: 'Убуд — где поесть недорого', cnt: '11 сообщ', quote: '«Locavore слишком дорого, лучше Clear Cafe — вкусно и красиво...»' },
+    ],
+  },
+  {
+    id: 'business',
+    label: 'Бизнес-клуб',
+    msgs: [
+      { name: 'Игорь', cls: 'n1', text: 'Кто-нибудь работал с Тинькофф Эквайрингом?' },
+      { name: 'Настя', cls: 'n2', text: 'Было обсуждение, поищи через бота' },
+      { name: 'Игорь', cls: 'n1', cmd: true, query: 'эквайринг тарифы' },
+    ],
+    query: 'эквайринг тарифы',
+    results: [
+      { topic: 'Сравнение эквайрингов для ИП', cnt: '26 сообщ', quote: '«Тинькофф 1.9% без минималки, ЮKassa дороже но удобнее по API» — @igor_biz' },
+      { topic: 'Переход с ЮKassa на Stripe', cnt: '14 сообщ', quote: '«Stripe для зарубежных клиентов, для РФ оставили Тинькофф...»' },
+    ],
+  },
+  {
+    id: 'health',
+    label: 'ЗОЖ & Спорт',
+    msgs: [
+      { name: 'Лена', cls: 'n2', text: 'Какой протеин все брали? Забыла название' },
+      { name: 'Дима', cls: 'n3', text: 'Спроси бота, там было' },
+      { name: 'Лена', cls: 'n2', cmd: true, query: 'какой протеин лучше' },
+    ],
+    query: 'какой протеин лучше',
+    results: [
+      { topic: 'Протеин — что берём', cnt: '22 сообщ', quote: '«ON Gold Standard — классика. KFD дешевле и норм по составу» — @dima_fit' },
+      { topic: 'Спортпит с iHerb — заказ', cnt: '9 сообщ', quote: '«Брали оптом, доставка 10 дней, всё пришло без проблем...»' },
+    ],
+  },
+  {
+    id: 'dev',
+    label: 'Dev Team',
+    msgs: [
+      { name: 'Дима', cls: 'n3', text: 'Какую библиотеку для анимаций в React выбрали?' },
+      { name: 'Алексей', cls: 'n1', text: 'Было обсуждение, глянь через /search' },
+      { name: 'Дима', cls: 'n3', cmd: true, query: 'анимации react библиотека' },
+    ],
+    query: 'анимации react библиотека',
+    results: [
+      { topic: 'Framer Motion vs React Spring', cnt: '31 сообщ', quote: '«Framer Motion проще в API, React Spring мощнее для сложных анимаций. Взяли Framer» — @alex_dev' },
+      { topic: 'Анимация списков — переход на Motion', cnt: '12 сообщ', quote: '«AnimatePresence решает все проблемы с exit-анимациями, до этого мучились...»' },
+    ],
+  },
 ]
 
 export default function Features() {
   const ref = useReveal()
   const [activeTab, setActiveTab] = useState('work')
+  const [activeKbTab, setActiveKbTab] = useState('lifestyle')
   const chat = chatTabs.find(t => t.id === activeTab)
+  const kb = kbTabs.find(t => t.id === activeKbTab)
 
   return (
     <section className="features" id="features" ref={ref}>
@@ -246,26 +332,34 @@ export default function Features() {
             Бот индексирует историю и превращает чат в базу знаний.
           </p>
 
+          <div className="chat-tabs r d3">
+            {kbTabs.map(t => (
+              <button
+                key={t.id}
+                className={`chat-tab${activeKbTab === t.id ? ' active' : ''}`}
+                onClick={() => setActiveKbTab(t.id)}
+              >
+                {t.label}
+              </button>
+            ))}
+          </div>
+
           <div className="feat-mock r d3">
             <div className="kb-single">
-              <div className="mock-msg m1"><span className="mock-name n1">Алексей</span> Я на Бали, куда сходить в кафе классное?</div>
-              <div className="mock-msg m2"><span className="mock-name n2">Марина</span> Мы же обсуждали, спроси у бота</div>
-              <div className="kb-search-msg">
-                <span className="mock-name n1">Алексей</span>
-                <span className="kb-cmd">/search</span> кафе на Бали
-              </div>
+              {kb.msgs.map((m, i) => (
+                m.cmd
+                  ? <div key={i} className="kb-search-msg"><span className={`mock-name ${m.cls}`}>{m.name}</span><span className="kb-cmd">/search</span> {m.query}</div>
+                  : <div key={i} className={`mock-msg ${i % 3 === 0 ? 'm1' : i % 3 === 1 ? 'm2' : 'm3'}`}><span className={`mock-name ${m.cls}`}>{m.name}</span> {m.text}</div>
+              ))}
               <div className="kb-result-card">
-                <div className="kb-result-head">🔍 Результаты по «кафе на Бали»</div>
-                <div className="kb-result-item">
-                  <div className="kb-result-topic">Лучшие кафе в Чангу <span className="kb-result-cnt">(18 сообщ)</span></div>
-                  <div className="kb-result-quote">«Crate Cafe — лучший завтрак, Shady Shack — для веганов, а в Milk & Madu обалденный кофе» — @marina_k</div>
-                  <div className="kb-result-link">Перейти к обсуждению</div>
-                </div>
-                <div className="kb-result-item">
-                  <div className="kb-result-topic">Убуд — где поесть недорого <span className="kb-result-cnt">(11 сообщ)</span></div>
-                  <div className="kb-result-quote">«Locavore слишком дорого, лучше Clear Cafe — вкусно и красиво...»</div>
-                  <div className="kb-result-link">Перейти к обсуждению</div>
-                </div>
+                <div className="kb-result-head">🔍 Результаты по «{kb.query}»</div>
+                {kb.results.map((r, i) => (
+                  <div key={i} className="kb-result-item">
+                    <div className="kb-result-topic">{r.topic} <span className="kb-result-cnt">({r.cnt})</span></div>
+                    <div className="kb-result-quote">{r.quote}</div>
+                    <div className="kb-result-link">Перейти к обсуждению</div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -278,55 +372,6 @@ export default function Features() {
         </div>
       </div>
 
-      {/* ── Super Summary ── */}
-      <div className="feat">
-        <div className="col">
-          <div className="feat-tag r">Super Summary</div>
-          <h2 className="sec-title r d1">Один дайджест.<br />Все чаты. Каждое утро.</h2>
-          <p className="sec-sub r d2">
-            Ежедневная сводка по всем чатам — в личные сообщения. Одно вместо десятков.
-          </p>
-
-          <div className="feat-mock r d3">
-            <div className="mock-digest">
-              <div className="digest-head">☀️ Утренний дайджест</div>
-              <div className="digest-chat">
-                <span className="digest-dot" style={{ background: 'var(--blue)' }} />
-                <div>
-                  <div className="digest-name">Product Team</div>
-                  <div className="digest-topic">— Обсудили роадмап Q3, приоритет — мобильное приложение <span className="digest-cnt">(12 сообщ)</span></div>
-                  <div className="digest-topic">— Баги в авторизации — нужен хотфикс до пятницы <span className="digest-cnt">(8 сообщ)</span></div>
-                  <div className="digest-link">🔗 Роадмап Q3 — Notion</div>
-                </div>
-              </div>
-              <div className="digest-chat">
-                <span className="digest-dot" style={{ background: 'var(--green)' }} />
-                <div>
-                  <div className="digest-name">Design Chat</div>
-                  <div className="digest-topic">— Финализировали UI Kit, пушат в Figma сегодня <span className="digest-cnt">(7 сообщ)</span></div>
-                  <div className="digest-topic">— Разбор нового редизайна Spotify <span className="digest-cnt">(4 сообщ)</span></div>
-                  <div className="digest-link">🔗 UI Kit — Figma</div>
-                </div>
-              </div>
-              <div className="digest-chat">
-                <span className="digest-dot" style={{ background: 'var(--violet)' }} />
-                <div>
-                  <div className="digest-name">Marketing</div>
-                  <div className="digest-topic">— Запуск кампании перенесён на понедельник <span className="digest-cnt">(5 сообщ)</span></div>
-                  <div className="digest-topic">— Утвердили бюджет на креативы Q2 <span className="digest-cnt">(3 сообщ)</span></div>
-                  <div className="digest-link">🔗 Медиаплан — Google Sheets</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <ul className="feat-checks-h r d4">
-            <li><Check /> Все чаты в одном</li>
-            <li><Check /> Приходит в личку</li>
-            <li><Check /> Умная AI-саммаризация</li>
-          </ul>
-        </div>
-      </div>
     </section>
   )
 }
