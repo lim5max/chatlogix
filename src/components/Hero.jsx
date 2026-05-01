@@ -68,12 +68,22 @@ export default function Hero() {
                     <div className="ss-gtitle">📌 Команда / Продукт</div>
                     <p className="ss-line">— Релиз v2.4 сдвигается на среду, блокер в оплате <span className="ss-cnt">(9)</span></p>
                     <p className="ss-line">— Дизайн главной утвердили, макеты в Figma <span className="ss-cnt">(5)</span></p>
-                    <p className="ss-line">— Нужен хотфикс авторизации до пятницы <span className="ss-cnt">(7)</span></p>
                     <div className="ss-ref">
                       <span className="ss-ref-label">Ссылки:</span>
                       <span className="ss-ref-link">Таск-трекер спринта — Jira</span>
                       <span className="ss-ref-link">Макеты v2.4 — Figma</span>
                     </div>
+                  </div>
+
+                  <div className="ss-group">
+                    <div className="ss-gtitle">👨‍👩‍👧 Родительский комитет</div>
+                    <p className="ss-line">— Сбор на выпускной: осталось собрать 4 200 ₽ <span className="ss-cnt">(17)</span></p>
+                    <p className="ss-line">— Родительское собрание перенесли на четверг <span className="ss-cnt">(6)</span></p>
+                  </div>
+
+                  <div className="ss-group">
+                    <div className="ss-gtitle">💪 ЗОЖ & Спорт</div>
+                    <p className="ss-line ss-empty">❌ Нет новых сообщений</p>
                   </div>
 
                   <div className="ss-voice-block">

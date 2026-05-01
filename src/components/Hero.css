@@ -227,6 +227,10 @@
   margin-bottom: 2px;
   padding-left: 2px;
 }
+.ss-empty {
+  color: var(--gray-400);
+  font-style: italic;
+}
 .ss-cnt {
   color: var(--blue);
   font-size: 0.78rem;
