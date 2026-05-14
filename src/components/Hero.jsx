@@ -58,7 +58,7 @@ export default function Hero() {
                   <div className="tg-bubble-tag">📋 Super-summary за 24 часа</div>
 
                   <div className="ss-group">
-                    <div className="ss-gtitle">📌 ЖК «Солнечный»</div>
+                    <div className="ss-gtitle">📌 ЖК «Стандартный»</div>
                     <p className="ss-line">— Горячую воду отключат в корпусе 2 на сутки <span className="ss-cnt">(34)</span></p>
                     <p className="ss-line">— Парковку у 3-го подъезда перекроют для ремонта <span className="ss-cnt">(18)</span></p>
                     <p className="ss-line">— Собрание жильцов перенесли на субботу <span className="ss-cnt">(11)</span></p>
